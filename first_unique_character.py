@@ -32,6 +32,7 @@ def firstUniqChar(s: str):
         if dic[ch] == 1:
             return i 
     return -1
+
 # Runtime: 136 ms, faster than 46.28%
 
 print(firstUniqChar('loveleetcode'))
