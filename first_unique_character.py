@@ -9,16 +9,17 @@ from collections import Counter
 
 # Runtime: 120 ms, faster than 63.38%
 
-class Solution:
-    def firstUniqChar(self, s: str):
-        count = Counter(s)
-        
-        index = 0
-        for ch in s:
-            if count[ch] == 1:
-                return index
-            else:
-                index += 1       
-        return -1
+def firstUniqChar(s: str):
+    count = Counter(s)
+    
+    index = 0
+    for ch in s:
+        if count[ch] == 1:
+            return index
+        else:
+            index += 1       
+    return -1
+
+print(firstUniqChar('loveleetcode'))
 
 # Runtime: 140 ms, faster than 42.15% 
