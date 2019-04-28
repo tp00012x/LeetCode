@@ -1,11 +1,11 @@
 from collections import Counter, defaultdict
 
-# def firstUniqChar(s: str) -> int:
-#     count = Counter(s)
-#     for i, ch in enumerate(s):
-#         if count[ch] == 1:
-#             return i 
-#     return -1
+def firstUniqChar(s: str) -> int:
+    count = Counter(s)
+    for i, ch in enumerate(s):
+        if count[ch] == 1:
+            return i 
+    return -1
 
 # Runtime: 120 ms, faster than 63.38%
 
@@ -22,17 +22,26 @@ from collections import Counter, defaultdict
 
 # Runtime: 140 ms, faster than 42.15% 
 
-def firstUniqChar(s: str):
-    dic = defaultdict(lambda: 0)
+# def firstUniqChar(s: str):
+#     dic = defaultdict(lambda: 0)
 
-    for i in s:
-        dic[i] += 1
+#     for i in s:
+#         dic[i] += 1
 
-    for i, ch in enumerate(s):
-        if dic[ch] == 1:
-            return i 
-    return -1
+#     for i, ch in enumerate(s):
+#         if dic[ch] == 1:
+#             return i 
+#     return -1
 
 # Runtime: 136 ms, faster than 46.28%
+
+
+# def firstUniqChar(s: str):
+#     for pos, char in enumerate(s):
+#         if char not in s.replace(char, '', 1):
+#             return pos
+#     return -1
+
+# Runtime: 284 ms, faster than 8.75%
 
 print(firstUniqChar('loveleetcode'))
