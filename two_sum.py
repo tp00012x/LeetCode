@@ -41,4 +41,4 @@ def twoSum(nums, target):
             return [buff_dict[nums[i]], i]
         buff_dict[target - nums[i]] = i
 
-print(twoSum([2, 11, 15, 7], 9)) # return [0,1]
+print(twoSum([2, 11, 15, 7], 9))
