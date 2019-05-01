@@ -18,6 +18,12 @@
 #             if nums[i] + nums[j] == target:
 #                 return [i, j]
 
+#Enumerate
+# def twoSum(nums, target):
+#         for i, n in enumerate(nums):
+#             if target - n in nums and nums.index(target-n) != i:
+#                 return sorted([i, nums.index(target - n)])
+
 #Better solution
 def twoSum(nums, target):
     seen = {}
