@@ -25,13 +25,20 @@
 #                 return sorted([i, nums.index(target - n)])
 
 #Better solution
+# def twoSum(nums, target):
+#     seen = {}
+#     for count, char in enumerate(nums):
+#         remaining = target - char
+#         if remaining in seen:
+#             return [seen[remaining], count]
+#         seen[char] = count
+#     return []
+
 def twoSum(nums, target):
-    seen = {}
-    for count, char in enumerate(nums):
-        remaining = target - char
-        if remaining in seen:
-            return [seen[remaining], count]
-        seen[char] = count
-    return []
-        
+    buff_dict = {}
+    for i in range(len(nums)):
+        if nums[i] in buff_dict:
+            return [buff_dict[nums[i]], i]
+        buff_dict[target - nums[i]] = i
+
 print(twoSum([2, 11, 15, 7], 9)) # return [0,1]
