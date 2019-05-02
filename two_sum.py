@@ -36,9 +36,9 @@
 
 def twoSum(nums, target):
     buff_dict = {}
-    for i in range(len(nums)):
-        if nums[i] in buff_dict:
-            return [buff_dict[nums[i]], i]
-        buff_dict[target - nums[i]] = i
+    for count in range(len(nums)):
+        if nums[count] in buff_dict:
+            return [buff_dict[nums[count]], count]
+        buff_dict[target - nums[count]] = count
 
 print(twoSum([2, 11, 15, 7], 9))
